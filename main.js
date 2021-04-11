@@ -30,7 +30,7 @@ let jmena = [
 let tazenaJmena = [];
 
 function tahnoutJmeno() {
-    if (jmena.length === 0) {
+    if (jmena.length === 0) { //!pokud je délka pole jména rovna nule tak se vrať
         return;
     }
 
@@ -44,11 +44,15 @@ function tahnoutJmeno() {
     console.log(vyherniJmeno);
 
     // Vyřadíme vylosované jméno z osudí
+    jmena.splice(vyherniIndex, 1);
+    console.log(jmena.length);
 
     // Výherní jméno si uložíme do pole k ostatním výherním
     
 
-    
+
+
+    //
     let vyherce = document.querySelector('#vyherka');
     vyherce.innerHTML = vyherniJmeno;
 }
